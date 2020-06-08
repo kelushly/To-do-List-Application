@@ -1,4 +1,4 @@
-# To-do-List-Application
+# Achiever - To-do-List
 
 Aesthetically pleasing productivity tool that helps users achieve their most ambitious goals one step at a time in an organized fashion.
 
