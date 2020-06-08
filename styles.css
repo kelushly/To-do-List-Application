@@ -1,0 +1,473 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, rgb(60, 221, 141), #5ab1eb);
+    color: white;
+    font-family: "Comic Neue", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size:2rem;
+}
+
+header, form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 20vh 5vh;
+}
+
+form input, form button {
+    padding: 0.7rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    border-radius: 1px;
+}
+
+form input::placeholder{
+    font-size: 1.5rem;
+    color: rgb(182, 172, 172);
+}
+
+form button {
+    color: #5ab1eb;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #5ab1eb;
+    color: white;
+}
+
+.borderless {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.to-do-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do-list {
+    min-width:30%;
+    list-style: none;
+}
+
+.toDo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    border-radius: 2px;
+}
+
+.toDo li {
+    flex: 1;
+}
+
+.trash-button, .completed-button {
+    background: rgb(226, 85, 104);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 1px;
+}
+
+.completed-button {
+    background-color: rgb(60, 221, 141);
+}
+
+.completed-button:hover{
+    background: white;
+    color: rgb(60, 221, 141);
+    transition: all 0.3s ease;
+}
+
+.trash-button:hover {
+    background: white;
+    color: rgb(226, 85, 104);
+    transition: all 0.3s ease;
+}
+
+.toDo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity:0.5
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #5ab1eb;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25bc";
+    position: absolute;
+    background: #5ab1eb;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #5ab1eb;
+}
+
+/* RESPONSIVE RULES - BODY */
+@media screen and (max-width: 650px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 339px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 319px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 305px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 286px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 277px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    form {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-toDo {
+        width: 165px;
+        height: 50px;
+        position: relative;
+    }
+
+    .select::after {
+        position: absolute;
+        left: 269px;
+        right: 0;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    form {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .to-do-input {
+        width: 85%;
+        position: relative;
+    }
+    
+    .select::after {
+        position: absolute;
+        transform: translateX(-41%); 
+    }
+}
+
+@media screen and (max-width: 456px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 18px;
+    }
+    
+    div.select::after {
+        transform: translateX(-51%); 
+    }
+}
+
+@media screen and (max-width: 430px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 17px;
+    }
+    
+    div.select::after {
+        transform: translateX(-65%); 
+    }
+}
+
+@media screen and (max-width: 420px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 17px;
+    }
+    
+    div.select::after {
+        transform: translateX(-86%); 
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 16px;
+    }
+    
+    div.select::after {
+        transform: translateX(-105%); 
+    }
+}
+
+@media screen and (max-width: 375px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 16px;
+    }
+    
+    div.select::after {
+        transform: translateX(-129%); 
+    }
+}
+
+@media screen and (max-width: 355px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 15px;
+    }
+    
+    div.select::after {
+        transform: translateX(-148%); 
+    }
+}
+
+@media screen and (max-width: 330px) {
+    form {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .to-do-input {
+        width: 70%;
+        padding: 2%;
+    }
+
+    .to-do-button {
+        padding: 2%;
+    }
+
+    .to-do-input::placeholder {
+        font-size: 14px;
+    }
+    
+    div.select::after {
+        transform: translateX(-173%); 
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>Achiever - To-do List</title>
+    <link rel="shortcute icon" type="image/ico" href="img/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <form name="to-do-form">
+        <input name="to-do-input" type="text" class="to-do-input" placeholder="What would you like to get done?" required="required">
+        <button class="to-do-button">
+            <i class="fas fa-plus square"></i>
+        </button>
+        <div class="select">
+            <select name="toDos" class="filter-toDo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="to-do-container">
+        <ul class="to-do-list"></ul>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
